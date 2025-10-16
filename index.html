@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godfrey Hospital - World-Class Care in Lagos</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins & Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'lato': ['Lato', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#005a7a', // A deeper, more professional blue
+                        'secondary': '#f0f7f9',
+                        'accent': '#ff7f50', // Warm Coral
+                        'accent-hover': '#ff6a3a',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Applying the fonts to the body for default text */
+        body {
+            font-family: 'Lato', 'sans-serif';
+            color: #333;
+        }
+        /* Applying the Poppins font to all headings */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', 'sans-serif';
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 90, 122, 0.7), rgba(0, 90, 122, 0.7)), url('https://placehold.co/1600x900/a0d2eb/ffffff?text=Compassionate+Medical+Staff');
+            background-size: cover;
+            background-position: center;
+        }
+        /* Sticky nav shadow on scroll */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        /* Styles for scroll animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .is-visible {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Header & Navigation -->
+    <header id="navbar" class="bg-white sticky-nav shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2">
+                <i class="ph-bold ph-heartbeat text-3xl text-primary"></i>
+                <h1 class="text-2xl font-bold text-primary">Godfrey Hospital</h1>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#" class="text-gray-700 hover:text-primary transition">Home</a>
+                <a href="#" class="text-gray-700 hover:text-primary transition">About Us</a>
+                <a href="#" class="text-gray-700 hover:text-primary transition">Services</a>
+                <a href="#" class="text-gray-700 hover:text-primary transition">Our Doctors</a>
+                <a href="#" class="text-gray-700 hover:text-primary transition">Contact</a>
+            </nav>
+            
+            <!-- Call to Action Button -->
+            <a href="#" class="hidden md:inline-block bg-accent text-white font-semibold py-2 px-5 rounded-lg shadow-md hover:bg-accent-hover transition transform hover:-translate-y-0.5">
+                Book Appointment
+            </a>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden">
+                <i class="ph-bold ph-list text-3xl text-primary"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#" class="block text-gray-700 hover:text-primary transition">Home</a>
+            <a href="#" class="block text-gray-700 hover:text-primary transition">About Us</a>
+            <a href="#" class="block text-gray-700 hover:text-primary transition">Services</a>
+            <a href="#" class="block text-gray-700 hover:text-primary transition">Our Doctors</a>
+            <a href="#" class="block text-gray-700 hover:text-primary transition">Contact</a>
+            <a href="#" class="mt-4 inline-block w-full text-center bg-accent text-white font-semibold py-2 px-5 rounded-lg shadow-md hover:bg-accent-hover transition">
+                Book Appointment
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Hero Section -->
+        <section class="bg-primary text-white">
+            <div class="container mx-auto px-6 py-24 md:py-32 text-center">
+                <h2 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Compassionate Care, World-Class Medicine.</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">
+                    At Godfrey Hospital, your health is our priority. We combine advanced medical technology with a personal, caring touch to ensure the best outcomes for you and your family in Lagos.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#" class="bg-accent text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-accent-hover transition transform hover:-translate-y-0.5 text-lg w-full sm:w-auto">
+                        Book an Appointment
+                    </a>
+                    <a href="#" class="bg-white text-primary font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-gray-100 transition transform hover:-translate-y-0.5 text-lg w-full sm:w-auto">
+                        View Our Services
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Trust Bar -->
+        <section class="bg-secondary">
+            <div class="container mx-auto px-6 py-10">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <a href="#" class="flex flex-col items-center p-4 rounded-lg hover:bg-white hover:shadow-lg transition animate-on-scroll">
+                        <i class="ph-bold ph-clock-countdown text-5xl text-primary mb-3"></i>
+                        <h3 class="text-xl font-semibold text-primary">24/7 Emergency Care</h3>
+                        <p class="text-gray-600 mt-1">We are here for you with round-the-clock emergency services.</p>
+                    </a>
+                    <a href="#" class="flex flex-col items-center p-4 rounded-lg hover:bg-white hover:shadow-lg transition animate-on-scroll" style="animation-delay: 0.2s;">
+                        <i class="ph-bold ph-users-three text-5xl text-primary mb-3"></i>
+                        <h3 class="text-xl font-semibold text-primary">Expert Medical Team</h3>
+                        <p class="text-gray-600 mt-1">Our board-certified doctors are dedicated to your well-being.</p>
+                    </a>
+                    <a href="#" class="flex flex-col items-center p-4 rounded-lg hover:bg-white hover:shadow-lg transition animate-on-scroll" style="animation-delay: 0.4s;">
+                        <i class="ph-bold ph-buildings text-5xl text-primary mb-3"></i>
+                        <h3 class="text-xl font-semibold text-primary">Modern & Clean Facility</h3>
+                        <p class="text-gray-600 mt-1">A safe and comfortable environment for your care.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Our Core Services -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 animate-on-scroll">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary">Specialized Care Tailored For You</h2>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">We offer a comprehensive range of services to meet the health needs of our community.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <a href="#" class="block bg-secondary rounded-lg p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-on-scroll">
+                        <i class="ph-bold ph-stethoscope text-4xl text-accent mb-4"></i>
+                        <h3 class="text-xl font-semibold text-primary mb-2">General Medicine</h3>
+                        <p class="text-gray-600">Comprehensive primary care, health screenings, and management of chronic conditions.</p>
+                    </a>
+                    <!-- Service Card 2 -->
+                    <a href="#" class="block bg-secondary rounded-lg p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-on-scroll" style="animation-delay: 0.1s;">
+                        <i class="ph-bold ph-baby text-4xl text-accent mb-4"></i>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Maternity & Paediatrics</h3>
+                        <p class="text-gray-600">Complete prenatal, delivery, and postnatal care for mothers and gentle care for children.</p>
+                    </a>
+                    <!-- Service Card 3 -->
+                    <a href="#" class="block bg-secondary rounded-lg p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-on-scroll" style="animation-delay: 0.2s;">
+                        <i class="ph-bold ph-first-aid-kit text-4xl text-accent mb-4"></i>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Minor Surgeries</h3>
+                        <p class="text-gray-600">Safe and efficient procedures for various minor surgical needs performed by our experts.</p>
+                    </a>
+                    <!-- Service Card 4 -->
+                    <a href="#" class="block bg-secondary rounded-lg p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-on-scroll" style="animation-delay: 0.3s;">
+                        <i class="ph-bold ph-test-tube text-4xl text-accent mb-4"></i>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Diagnostic Lab</h3>
+                        <p class="text-gray-600">Fast and accurate in-house laboratory services for precise diagnoses.</p>
+                    </a>
+                    <!-- Service Card 5 -->
+                    <a href="#" class="block bg-secondary rounded-lg p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-on-scroll" style="animation-delay: 0.4s;">
+                        <i class="ph-bold ph-heartbeat text-4xl text-accent mb-4"></i>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Cardiology</h3>
+                        <p class="text-gray-600">Expert heart care, from preventative screenings to managing heart conditions.</p>
+                    </a>
+                    <!-- Service Card 6 -->
+                    <a href="#" class="block bg-secondary rounded-lg p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1 flex flex-col justify-center items-center text-center animate-on-scroll" style="animation-delay: 0.5s;">
+                        <i class="ph-bold ph-dots-three-circle text-4xl text-accent mb-4"></i>
+                        <h3 class="text-xl font-semibold text-primary mb-2">And More...</h3>
+                        <span class="text-accent font-semibold hover:underline">View All Services →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Meet Our Team -->
+        <section class="bg-secondary py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                 <div class="lg:flex lg:items-center lg:gap-12">
+                    <div class="lg:w-1/2 animate-on-scroll">
+                        <h2 class="text-3xl md:text-4xl font-bold text-primary">Meet Our Caring Doctors</h2>
+                        <p class="text-gray-600 mt-4 mb-8">
+                            Our doctors are not only experts in their fields, but also compassionate individuals dedicated to your well-being. We believe in listening to our patients and building lasting relationships based on trust.
+                        </p>
+                        <a href="#" class="bg-primary text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-blue-900 transition transform hover:-translate-y-0.5">
+                            Meet The Full Team
+                        </a>
+                    </div>
+                    <div class="lg:w-1/2 mt-10 lg:mt-0">
+                        <div class="grid grid-cols-2 gap-4 animate-on-scroll" style="animation-delay: 0.2s;">
+                            <a href="#" class="block group"><img class="rounded-lg shadow-lg object-cover w-full h-48 md:h-64 group-hover:shadow-xl transition transform group-hover:-translate-y-1" src="https://placehold.co/400x400/a0d2eb/ffffff?text=Dr.+Adebayo" alt="Doctor Adebayo"></a>
+                            <a href="#" class="block group mt-4"><img class="rounded-lg shadow-lg object-cover w-full h-48 md:h-64 group-hover:shadow-xl transition transform group-hover:-translate-y-1" src="https://placehold.co/400x400/e0a0eb/ffffff?text=Dr.+Okoro" alt="Doctor Okoro"></a>
+                            <a href="#" class="block group"><img class="rounded-lg shadow-lg object-cover w-full h-48 md:h-64 group-hover:shadow-xl transition transform group-hover:-translate-y-1" src="https://placehold.co/400x400/ebe0a0/ffffff?text=Dr.+Chidinma" alt="Doctor Chidinma"></a>
+                             <a href="#" class="block group mt-4"><img class="rounded-lg shadow-lg object-cover w-full h-48 md:h-64 group-hover:shadow-xl transition transform group-hover:-translate-y-1" src="https://placehold.co/400x400/a0eba7/ffffff?text=Dr.+Musa" alt="Doctor Musa"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 5: Patient Testimonial -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center animate-on-scroll">
+                <i class="ph-bold ph-quotes text-5xl text-accent mb-4"></i>
+                <h2 class="text-2xl md:text-3xl font-semibold text-primary max-w-3xl mx-auto">
+                    "The care I received at Godfrey Hospital was exceptional. The doctors were attentive and listened to all my concerns. I felt safe and truly cared for."
+                </h2>
+                <p class="mt-6 font-bold text-gray-700">— Adekunle B., Ikeja</p>
+            </div>
+        </section>
+
+        <!-- Section 6: CTA -->
+         <section class="bg-primary text-white">
+            <div class="container mx-auto px-6 py-16 text-center">
+                <h2 class="text-3xl font-bold mb-2">Ready to Prioritize Your Health?</h2>
+                <p class="text-lg mb-8">Schedule your appointment with us today and experience dedicated care.</p>
+                <a href="#" class="bg-accent text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-accent-hover transition transform hover:-translate-y-0.5 text-lg">
+                    Book an Appointment Now
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Godfrey Hospital</h3>
+                    <p class="text-gray-400">Your trusted partner in health, providing compassionate and high-quality medical services to the Lagos community.</p>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Our Doctors</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Book Appointment</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start"><i class="ph-fill ph-map-pin mt-1 mr-2"></i><span>123 Health Way, Ikeja, Lagos, Nigeria</span></li>
+                        <li class="flex items-center"><i class="ph-fill ph-phone mr-2"></i><span>+234 123 456 7890</span></li>
+                        <li class="flex items-center"><i class="ph-fill ph-envelope mr-2"></i><span>godfreyhospital@gmail.com</span></li>
+                    </ul>
+                </div>
+                <!-- Opening Hours -->
+                 <div>
+                    <h3 class="text-xl font-bold mb-4">Opening Hours</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><span class="font-semibold">Mon - Fri:</span> 8:00 AM - 6:00 PM</li>
+                        <li><span class="font-semibold">Saturday:</span> 9:00 AM - 1:00 PM</li>
+                        <li><span class="font-semibold">Emergency:</span> 24 Hours, 7 Days</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-6 text-center text-gray-500">
+                <p>&copy; 2025 Godfrey Hospital. All Rights Reserved. Designed with care.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Add shadow to sticky nav on scroll
+        const navbar = document.getElementById('navbar');
+        window.onscroll = function() {
+            if (window.pageYOffset > 10) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        };
+
+        // JavaScript for Scroll Animations
+        const scrollElements = document.querySelectorAll('.animate-on-scroll');
+
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return (
+                elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+            );
+        };
+
+        const displayScrollElement = (element) => {
+            element.classList.add('is-visible');
+        };
+
+        const hideScrollElement = (element) => {
+            element.classList.remove('is-visible');
+        }
+
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.25)) {
+                    displayScrollElement(el);
+                }
+            })
+        }
+        
+        let throttleTimer = false;
+        
+        const throttle = (callback, time) => {
+            if (throttleTimer) return;
+            
+            throttleTimer = true;
+            setTimeout(() => {
+                callback();
+                throttleTimer = false;
+            }, time);
+        }
+
+        window.addEventListener('scroll', () => {
+           throttle(handleScrollAnimation, 250);
+        });
+
+        // Initialize on page load
+        handleScrollAnimation();
+
+    </script>
+</body>
+</html>
+
+
